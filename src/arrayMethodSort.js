@@ -23,7 +23,7 @@ function applyCustomSort() {
       return 0;
     };
 
-    const compare = compareFunction || defaultCompare;
+    const compare = (typeof compareFunction === 'function') ? compareFunction : defaultCompare;
 
     for (let i = 0; i < arr.length - 1; i++) {
       for (let j = 0; j < arr.length - 1 - i; j++) {
